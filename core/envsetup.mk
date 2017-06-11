@@ -32,9 +32,9 @@ endif
 
 
 # the variant -- the set of files that are included for a build
-ifeq ($(strip $(TARGET_BUILD_VARIANT)),)
+# ifeq ($(strip $(TARGET_BUILD_VARIANT)),)
 TARGET_BUILD_VARIANT := eng
-endif
+# endif
 
 # ---------------------------------------------------------------
 # Set up configuration for host machine.  We don't do cross-
@@ -91,7 +91,7 @@ endif
 
 # the host build defaults to release, and it must be release or debug
 ifeq ($(HOST_BUILD_TYPE),)
-HOST_BUILD_TYPE := release
+HOST_BUILD_TYPE := debug
 endif
 
 ifneq ($(HOST_BUILD_TYPE),release)
